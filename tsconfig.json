@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "lib": ["WebWorker", "DOM.Iterable"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "noEmit": true,
+    "paths": {
+      "nitro-concise-routing": ["./src"]
+    }
+  },
+  "include": ["src", "test"],
+  "exclude": ["dist", "examples", "playground", "test/fixture"]
+}

@@ -1,0 +1,61 @@
+{
+  "name": "nitro-concise-routing",
+  "version": "0.0.0",
+  "description": "Nitro module for more concise routing",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/94726/nitro-concise-routing"
+  },
+  "bugs": {
+    "url": "https://github.com/94726/nitro-concise-routing/issues"
+  },
+  "keywords": ["nitro", "routing"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "node": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./schema": {
+      "types": "./schema.d.ts"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",  
+  "files": ["dist", "*.d.ts"],
+  "scripts": {
+    "build": "unbuild",
+    "build:stub": "unbuild --stub",
+    "dev:build": "nitro build playground",
+    "dev": "nitro dev playground",
+    "dev:prepare": "nitro prepare playground",
+    "dev:preview": "node playground/.output/server/index.mjs",
+    "typecheck": "tsc --noEmit -p .",
+    "lint": "biome ci",
+    "lint:fix": "biome lint --write . && biome format --write .",
+    "release": "bumpp"
+  },
+  "resolutions": {
+    "nitro-concise-routing": "link:."
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "globby": "^14.0.1",
+    "ohash": "^1.1.3",
+    "pathe": "^1.1.2",
+    "ufo": "^1.5.3",
+    "unimport": "^3.7.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.1",
+    "bumpp": "^9.4.1",
+    "nitropack": "npm:nitropack-nightly@latest",
+    "typescript": "^5.4.5",
+    "unbuild": "^2.0.0"
+  },
+  "peerDependencies": {
+    "nitropack": "npm:nitropack-nightly@latest"
+  }
+}
