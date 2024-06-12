@@ -8,7 +8,7 @@ import type { Nitro } from 'nitropack'
 export default defineNitroModule({
   setup(nitro) {
     configureOptions(nitro)
-    
+
     nitro.hooks.hook('rollup:before', async (nitro, rollupConfig) => {
       rollupConfig.plugins ||= []
       if (!Array.isArray(rollupConfig.plugins))

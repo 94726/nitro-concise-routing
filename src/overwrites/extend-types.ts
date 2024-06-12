@@ -1,5 +1,5 @@
 import type { Nitro, NitroTypes } from 'nitropack'
-import { resolveNitroPath, writeFile } from 'nitropack/kit'
+import { resolveNitroPath } from 'nitropack/kit'
 import { relative, resolve } from 'pathe'
 
 export function extendTypes(nitro: Nitro, types: NitroTypes) {

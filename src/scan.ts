@@ -3,8 +3,7 @@ import { join, relative } from 'pathe'
 import { scanExports } from 'unimport'
 import { withBase, withLeadingSlash, withoutTrailingSlash } from 'ufo'
 import type { Plugin } from 'rollup'
-import type { Nitro } from 'nitropack'
-import type { NitroEventHandler } from 'nitropack/dist/types'
+import type { Nitro, NitroEventHandler } from 'nitropack'
 
 export const GLOB_SCAN_PATTERN = '**/*.{js,mjs,cjs,ts,mts,cts,tsx,jsx}'
 type FileInfo = { path: string; fullPath: string }
